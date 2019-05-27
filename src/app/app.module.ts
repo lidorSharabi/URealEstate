@@ -2,12 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { FirstComponent } from './new folder try 1/first/first.component';
+import { MainPanelComponent } from './components/main-panel/main-panel.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavigateBarComponent } from './components/navigate-bar/navigate-bar.component';
+import { ContentComponent } from './components/content/content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponent
+    NavigateBarComponent,
+    MainPanelComponent,
+    FooterComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule
