@@ -1,0 +1,104 @@
+.circled-image {
+    border-radius: 100px;
+  }
+  
+  .sbold {
+    font-weight: 600;
+  }
+  
+  body {
+    background-color: #f2f2f2;
+    font-family: "Open Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card {
+    background: #ffffff;
+    box-shadow: 0 0 10px #d5d5d5;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 350px;
+  }
+  
+  /* .card-header {
+    background: linear-gradient(to bottom, black 0%, rgba(125, 185, 232, 0) 100%);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    position: relative;
+    z-index: 5;
+  }
+  .card-header > .user {
+    display: flex;
+    justify-conten: space-between;
+    align-items: center;
+  }
+  .card-header > .user > .avatar {
+    border: 1px solid #ffffff;
+    height: 45px;
+    width: 45px;
+  }
+  .card-header > .user > .info {
+    font-size: 12px;
+    margin: 0 10px;
+  }
+  .card-header > .action {
+    font-size: 40px;
+  } */
+  
+  .card-body {
+    align-items: flex-end;
+    display: flex;
+    min-height: 250px;
+    padding: 15px 15px 0 15px;
+    background-color: white;  
+  }
+  .card-body > img {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    z-index: 1;
+  }
+  .card-body > p {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e1e1e1;
+    margin: 0 15px;
+    padding: 10px 0;
+    opacity: 0.3;
+  }
+  .card-footer > .time-ago {
+    font-size: 12px;
+  }
+  .card-footer > .action > span {
+    font-size: 22px;
+    margin: 0 3px;
+  }
+  .fa-chevron-right:hover:before, .fa-chevron-left:hover:before{
+    color: #4d4d49;
+    font-size: 40px;
+  }
+
+  .liked{
+    display: none;
+  }
+
+  .disliked{
+    color: red;
+  }

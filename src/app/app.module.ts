@@ -6,6 +6,7 @@ import { MainPanelComponent } from './components/main-panel/main-panel.component
 import { FooterComponent } from './components/footer/footer.component';
 import { NavigateBarComponent } from './components/navigate-bar/navigate-bar.component';
 import { ContentComponent } from './components/content/content.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ContentComponent } from './components/content/content.component';
     ContentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
