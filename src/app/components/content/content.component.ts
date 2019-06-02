@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-content',
@@ -7,13 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 srcq = 'https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg';
-src = 'https://unsplash.it/300x300?image=1060';
+// src = 'https://unsplash.it/300x300?image=1060';
+// src = '../../../assets/images/pic'+ this.picNum + 'jpeg'
+src: string;
 liked = !true;
 disliked = !true;
+@Input() header: string;
+@Input() picNum: number;
 
-  constructor() { }
+
+  constructor() { 
+    
+    
+  }
 
   ngOnInit() {
+    // console.log("i: ", this.picNum);
+    this.src = '../../../assets/images/pic'+ this.picNum + '.jpg'
   }
 
   next_pic(){

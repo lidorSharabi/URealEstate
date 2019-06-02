@@ -1,13 +1,20 @@
 <app-navigate-bar class="navigation-panel"></app-navigate-bar>
+<span class="search-container"><app-search></app-search></span>
 <app-main-panel class="main-panel"></app-main-panel>
+
 <div class="contents flex-container" style="display: inline-flex;">
+<div *ngFor="let header of contentsHeaders;let i = index" >
+<!-- <div class="contents flex-container" style="display: inline-flex;"></div> -->
+
+<app-content [header]=header [picNum]=i></app-content>
+<!-- <app-content></app-content>
 <app-content></app-content>
 <app-content></app-content>
 <app-content></app-content>
 <app-content></app-content>
 <app-content></app-content>
 <app-content></app-content>
-<app-content></app-content>
-<app-content></app-content>
-<app-content></app-content>
+<app-content></app-content> -->
 </div>
+</div>
+<!-- <div style="background-color: red; height: 100%"></div> -->

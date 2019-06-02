@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavigateBarComponent } from './components/navigate-bar/navigate-bar.component';
 import { ContentComponent } from './components/content/content.component';
 import { CommonModule } from '@angular/common';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CommonModule } from '@angular/common';
     NavigateBarComponent,
     MainPanelComponent,
     FooterComponent,
-    ContentComponent
+    ContentComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

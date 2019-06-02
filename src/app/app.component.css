@@ -14,25 +14,25 @@ body{
   }
 
 .main-panel {
-    height: 60%;
+    height: 100%;
     width: 100%;
     position: fixed;
     z-index: 1;
-    top: 10%;
+    top: 7%;
     left: 0;
     overflow-x: hidden;
   }
 
   .contents{
-    top: 40%;    
-    position: fixed;
+    top: 47%;
+    position: absolute;
     z-index: 2;
   }
 
   .flex-container {
-    display: flex;
+   display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     left: 5%;
     right: 5%;
   }
@@ -43,4 +43,11 @@ body{
     text-align: center;
     /* line-height: 75px; */
     /* font-size: 30px; */
+  }
+
+  .search-container{
+    z-index: 100000;
+    position: absolute;
+    padding-top: 30vh;
+    padding-left: 35%;
   }
