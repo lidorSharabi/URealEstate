@@ -8,6 +8,14 @@ import { NavigateBarComponent } from './components/navigate-bar/navigate-bar.com
 import { ContentComponent } from './components/content/content.component';
 import { CommonModule } from '@angular/common';
 import { SearchComponent } from './components/search/search.component';
+// import { FilterPipeModule } from 'ngx-filter-pipe';
+import { FormsModule } from '@angular/forms';
+// import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+
+
+
 
 @NgModule({
   declarations: [
@@ -20,7 +28,13 @@ import { SearchComponent } from './components/search/search.component';
   ],
   imports: [
     BrowserModule,
-    CommonModule
+    CommonModule,
+    // FilterPipeModule,
+    FormsModule,
+    // DropDownsModule,
+    BrowserAnimationsModule,
+    DropDownsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

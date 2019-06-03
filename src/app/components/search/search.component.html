@@ -1,4 +1,26 @@
+<div class="container">
 <div style="position: relative">
-<input class="input" type="text" placeholder="חפש רחוב, שכונה או עיר">
+<input class="input" type="text" placeholder="חפש רחוב, שכונה או עיר" [(ngModel)]="userFilter">
 <button class="search-btn">חפש</button>
+<div class="autocomplete-container">
+  <kendo-autocomplete class="autocomplete"
+      [data]="data"
+      [filterable]="true"
+      (filterChange)="handleFilter($event)"
+      (valueChange)="valueChange($event)"
+      [placeholder]="'חפש רחוב, שכונה או עיר'"
+  >
+  </kendo-autocomplete>
+</div>
+</div>
+<!-- <div class="results-container">
+  <p style="padding-right: 2%;  " *ngFor="let place of places | filterBy: userFilter">
+    {{ place }}
+  </p>
+  
+  <p *ngIf="(places | filterBy: userFilter).length === 0">
+    לא נמצאו התאמות, נסה שוב
+  </p>
+</div> -->
+
 </div>

@@ -20,9 +20,13 @@
     "@angular/platform-browser": "^6.0.0",
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
+    "@progress/kendo-angular-dropdowns": "^3.5.5",
+    "@progress/kendo-angular-l10n": "^1.1.0",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "rxjs-compat": "^6.0.0",
+    "@progress/kendo-theme-default": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.1",

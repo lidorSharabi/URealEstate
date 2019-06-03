@@ -29,3 +29,35 @@
     outline: none;
     color: white;
 }
+
+/* .results-container{
+    background-color: #b3d1d3;
+    height: 100%;
+    width: 145%;
+    border-radius: 10px;
+    text-align: right;
+} */
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.autocomplete-container{
+    height: 57% !important;
+    font-family: sans-serif;
+    top: 8%;
+    left: 1px;
+    text-align: right;
+    position: absolute;
+}
+
+.autocomplete{
+    /* border: none; */
+    height: 155%;
+    width: 175%;
+    border-radius: 25px;
+    background-color: transparent;
+    text-align: right;
+    font-family: sans-serif;
+}
