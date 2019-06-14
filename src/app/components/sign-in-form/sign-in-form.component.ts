@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import * as fromURealEstate from "../../store/reducers/URealEstate.reducer"; 
 import { Observable } from 'rxjs';
 import * as fromActions from "../../store/actions/URealEstate.actions";
+import { WebApiService } from 'src/app/services/web-api.service';
 
 @Component({
   selector: 'app-sign-in-form',
@@ -21,7 +22,7 @@ export class SignInFormComponent implements OnInit, OnChanges {
   // public FormOpen = false;
   // formClosed: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor(private store: Store<fromURealEstate.State>) { }
+  constructor(private store: Store<fromURealEstate.State>, private webApiService: WebApiService) { }
 
   ngOnInit() {
     this.store.select(fromURealEstate.getIsUserDialogOpen).subscribe(x => this.userDetailsOpen = x);
@@ -37,6 +38,7 @@ export class SignInFormComponent implements OnInit, OnChanges {
   onSubmit() {
      this.getCheckboxesValues();
     console.log("model: ", this.model);
+    this.callWebApi();
     this.closeForm();
     this.openDialog();    
     }
@@ -73,5 +75,14 @@ export class SignInFormComponent implements OnInit, OnChanges {
 
     public openDialog() {
       this.DialogOpen = true;
+    }
+
+    callWebApi() {
+      this.webApiService.createNewUser(this.model).subscribe((data: boolean) =>
+          console.log("createUser", data)
+      );
+      this.webApiService.check().subscribe((data: boolean) =>
+        console.log("data", data)
+      );
     }
 }

@@ -15,7 +15,7 @@ export class NavigateBarComponent implements OnInit {
   userDetailsOpen: boolean;
   // @Output() userClicked: EventEmitter<number> = new EventEmitter<number>();
 
-  constructor(private store: Store<fromURealEstate.State>, private webApiService: WebApiService) { }
+  constructor(private store: Store<fromURealEstate.State>) { }
 
   ngOnInit() {
     // this.store.dispatch(new fromActions.UserDialogOpen(true));
@@ -36,18 +36,18 @@ export class NavigateBarComponent implements OnInit {
   // }
 
 
-  callWebApi() {
-    var user = new CreateUserRequest();
-    user.email = 'lidor206@gmail.com';
-    user.name = 'lidor';
-    user.price = 1500000;
-    user.rooms = 4;
-    user.typeId = 1;
-    this.webApiService.createNewUser(user).subscribe((data: boolean) =>
-        console.log("createUser", data)
-    );
-    this.webApiService.check().subscribe((data: boolean) =>
-      console.log("data", data)
-    );
-  }
+  // callWebApi() {
+  //   var user = new CreateUserRequest();
+  //   user.email = 'lidor206@gmail.com';
+  //   user.name = 'lidor';
+  //   user.price = 1500000;
+  //   user.rooms = 4;
+  //   user.typeId = 1;
+  //   this.webApiService.createNewUser(user).subscribe((data: boolean) =>
+  //       console.log("createUser", data)
+  //   );
+  //   this.webApiService.check().subscribe((data: boolean) =>
+  //     console.log("data", data)
+  //   );
+  // }
 }
