@@ -1,8 +1,9 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import * as fromURealEstate from "../../store/reducers/URealEstate.reducer"; 
 import * as fromActions from "../../store/actions/URealEstate.actions";
-import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { WebApiService } from '../../services/web-api.service';
+import { CreateUserRequest } from '../../models/createUserRequest.model';
 
 @Component({
   selector: 'app-navigate-bar',
@@ -14,7 +15,7 @@ export class NavigateBarComponent implements OnInit {
   userDetailsOpen: boolean;
   // @Output() userClicked: EventEmitter<number> = new EventEmitter<number>();
 
-  constructor(private store: Store<fromURealEstate.State>) { }
+  constructor(private store: Store<fromURealEstate.State>, private webApiService: WebApiService) { }
 
   ngOnInit() {
     // this.store.dispatch(new fromActions.UserDialogOpen(true));
@@ -34,4 +35,19 @@ export class NavigateBarComponent implements OnInit {
   //   this.store.dispatch(new fromActions.UserDialogOpen(false));
   // }
 
+
+  callWebApi() {
+    var user = new CreateUserRequest();
+    user.email = 'lidor206@gmail.com';
+    user.name = 'lidor';
+    user.price = 1500000;
+    user.rooms = 4;
+    user.typeId = 1;
+    this.webApiService.createNewUser(user).subscribe((data: boolean) =>
+        console.log("createUser", data)
+    );
+    this.webApiService.check().subscribe((data: boolean) =>
+      console.log("data", data)
+    );
+  }
 }
