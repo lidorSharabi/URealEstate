@@ -1,0 +1,81 @@
+ <div class="container">
+  <div class="example-wrapper">
+      <kendo-dialog title="צור חשבון חדש" *ngIf="userDetailsOpen" (close)="closeForm()" [minWidth]="250" [width]="450">
+          <form>
+              <div class="form-group">
+                <label for="name">שם מלא</label>
+                <input type="text" class="form-control" id="name" required style="text-align: right;" [(ngModel)]="model.name" name="name">
+              </div>
+          
+              <div class="form-group">
+                <label for="alterEgo">דואר אלקטרוני</label>
+                <input type="email" class="form-control" id="alterEgo" required style="text-align: right;" [(ngModel)]="model.email" name="email">
+              </div>
+          
+              <div class="form-group">
+                <label for="name">ססמה</label>
+                <input type="password" class="form-control" id="name" required style="text-align: right;" [(ngModel)]="model.password" name="password">
+              </div>
+          
+              <div class="form-group">
+                <label for="location">...אני מתעניין בדירות באזור</label>
+                <select class="form-control" required style="text-align: right;" [(ngModel)]="model.location" name="location">
+                  <option *ngFor="let location of locations" [value]="location">{{location}}</option>
+                </select>
+              </div>
+          
+              <div class="form-group">
+                <label for="room">מספר חדרים</label>
+                <select class="form-control" required style="text-align: right;" [(ngModel)]="model.roomNum" name="roonNum">
+                  <option *ngFor="let room of roomNum" [value]="room">{{room}}</option>
+                </select>
+              </div>
+          
+              <div class="form-group">
+                <label for="name">עד מחיר</label>      
+                <input type="range" #price required (input)="price.value" id="price" min="0" max="5000000" [(ngModel)]="model.price" name="price" >
+                <label for="price" style="padding-right: 14vw;">{{price.value}}</label>
+              </div>
+          
+              <div class="checkboxes-container">
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox4" style="margin-left: 10%;">
+                <label for="name">בית פרטי</label>      
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox0" style="margin-left: 10%;">
+                <label for="name">דירה</label>      
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox2" style="margin-left: 10%;">
+                <label for="name">דירת גן</label>      
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox5" style="margin-left: 10%;">
+                <label for="name">פנטהאוז</label>      
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox1" style="margin-left: 10%;">
+                <label for="name">מחסן</label>      
+              </div>
+              <div class="checkbox-container">
+                  <input type="checkbox" id="checkbox3" style="margin-left: 10%;">
+                  <label for="name">חניה</label>      
+              </div>
+              </div>
+            </form>        
+          <kendo-dialog-actions>
+              <button type="submit" kendoButton (click)="onSubmit()">הרשם</button>
+          </kendo-dialog-actions>
+      </kendo-dialog>
+    </div>
+
+  <div class="example-wrapper">
+      <kendo-dialog title="הרשמה הושלמה" *ngIf="DialogOpen" (close)="closeDialog()" [minWidth]="250" [width]="450">
+          <p style="margin: 30px; text-align: center;">!נרשמת בהצלחה לאתר</p>
+          <kendo-dialog-actions>
+              <button kendoButton (click)="closeDialog()">עבור לדף הבית</button>
+          </kendo-dialog-actions>
+      </kendo-dialog>
+    </div>
+</div>
