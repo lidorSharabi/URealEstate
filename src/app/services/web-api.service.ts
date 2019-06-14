@@ -26,7 +26,6 @@ export class WebApiService {
     return this.http.post<any>(
       'http://localhost:25099/api/user/createUser',
       user,
-      httpOptions
-    );
+      { withCredentials: true });
   }
 }
