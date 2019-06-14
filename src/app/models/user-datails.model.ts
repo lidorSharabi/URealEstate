@@ -4,7 +4,7 @@ export class UserDetails {
     public email?: string,
     public password?: string,
     public location?: string,
-    public roomNum?: number,
+    public rooms?: number,
     public price?: number,
     public types?: number[],
   ){}
