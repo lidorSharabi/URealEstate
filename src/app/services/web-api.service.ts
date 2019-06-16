@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { CreateUserRequest } from '../models/createUserRequest.model';
+import { UserDetails } from '../models/user-datails.model';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -22,7 +22,7 @@ export class WebApiService {
       { withCredentials: true });
   }
 
-  createNewUser(user :CreateUserRequest) {
+  createNewUser(user :UserDetails) {
     return this.http.post<any>(
       'http://localhost:25099/api/user/createUser',
       user,

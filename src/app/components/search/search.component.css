@@ -41,6 +41,7 @@
 .container{
     display: flex;
     flex-direction: column;
+    width: 23vw;
 }
 
 .autocomplete-container{
@@ -60,4 +61,8 @@
     background-color: transparent;
     text-align: right;
     font-family: sans-serif;
+}
+
+#hhh{
+    text-align: right;
 }

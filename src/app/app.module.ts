@@ -9,11 +9,14 @@ import { NavigateBarComponent } from './components/navigate-bar/navigate-bar.com
 import { ContentComponent } from './components/content/content.component';
 import { CommonModule } from '@angular/common';
 import { SearchComponent } from './components/search/search.component';
-// import { FilterPipeModule } from 'ngx-filter-pipe';
 import { FormsModule } from '@angular/forms';
-// import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { SignInFormComponent } from './components/sign-in-form/sign-in-form.component';
+import { DialogsModule } from '@progress/kendo-angular-dialog';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { StoreModule } from '@ngrx/store';
+import { reducer } from './store/reducers/URealEstate.reducer';
 import { WebApiService } from './services/web-api.service';
 
 
@@ -26,7 +29,8 @@ import { WebApiService } from './services/web-api.service';
     MainPanelComponent,
     FooterComponent,
     ContentComponent,
-    SearchComponent
+    SearchComponent,
+    SignInFormComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +38,11 @@ import { WebApiService } from './services/web-api.service';
     HttpModule,
     // FilterPipeModule,
     FormsModule,
-    // DropDownsModule,
     BrowserAnimationsModule,
     DropDownsModule,
+    DialogsModule,
+    ButtonsModule,
+    StoreModule.forRoot(reducer),    
     HttpClientModule,
     
   ],

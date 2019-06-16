@@ -1,0 +1,19 @@
+/* @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css'); */
+.container{
+    /* width: 35%;
+    border: 1px solid;
+    border-radius: 15px; */
+    z-index: 400000000000;
+}
+
+.checkbox-container{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 2%;
+    width: 15%;
+}
+
+.checkboxes-container{
+    display: flex;
+    flex-direction: row-reverse;
+}
