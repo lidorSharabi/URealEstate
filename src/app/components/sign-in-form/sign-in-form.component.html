@@ -1,33 +1,33 @@
  <div class="container">
   <div class="example-wrapper">
-      <kendo-dialog title="צור חשבון חדש" *ngIf="userDetailsOpen" (close)="closeForm()" [minWidth]="250" [width]="450">
-          <form>
+      <kendo-dialog title="צור חשבון חדש" style="direction: rtl;" *ngIf="userDetailsOpen" (close)="closeForm()" [minWidth]="250" [width]="450">
+          <form style="direction: rtl;">
               <div class="form-group">
                 <label for="name">שם מלא</label>
-                <input type="text" class="form-control" id="name" required style="text-align: right;" [(ngModel)]="model.name" name="name">
+                <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name">
               </div>
           
               <div class="form-group">
                 <label for="alterEgo">דואר אלקטרוני</label>
-                <input type="email" class="form-control" id="alterEgo" required style="text-align: right;" [(ngModel)]="model.email" name="email">
+                <input type="email" class="form-control" id="alterEgo" required [(ngModel)]="model.email" name="email">
               </div>
           
               <div class="form-group">
                 <label for="name">ססמה</label>
-                <input type="password" class="form-control" id="name" required style="text-align: right;" [(ngModel)]="model.password" name="password">
+                <input type="password" class="form-control" id="name" required [(ngModel)]="model.password" name="password">
               </div>
           
               <div class="form-group">
-                <label for="location">...אני מתעניין בדירות באזור</label>
-                <select class="form-control" required style="text-align: right;" [(ngModel)]="model.location" name="location">
+                <label for="location">אני מתעניין בדירות באזור...</label>
+                <select class="form-control" required [(ngModel)]="model.location" name="location">
                   <option *ngFor="let location of locations" [value]="location">{{location}}</option>
                 </select>
               </div>
           
               <div class="form-group">
-                <label for="room">מספר חדרים</label>
-                <select class="form-control" required style="text-align: right;" [(ngModel)]="model.rooms" name="rooms">
-                  <option *ngFor="let room of rooms" [value]="room">{{room}}</option>
+                <label for="roomNum">מספר חדרים</label>
+                <select class="form-control" required [(ngModel)]="model.rooms" name="rooms">
+                  <option *ngFor="let room of roomNum" [value]="room">{{room}}</option>
                 </select>
               </div>
           
@@ -74,7 +74,7 @@
       <kendo-dialog title="הרשמה הושלמה" *ngIf="DialogOpen" (close)="closeDialog()" [minWidth]="250" [width]="450">
           <p style="margin: 30px; text-align: center;">!נרשמת בהצלחה לאתר</p>
           <kendo-dialog-actions>
-              <button kendoButton (click)="closeDialog()">עבור לדף הבית</button>
+              <button kendoButton (click)="closeDialog()">אישור</button>
           </kendo-dialog-actions>
       </kendo-dialog>
     </div>

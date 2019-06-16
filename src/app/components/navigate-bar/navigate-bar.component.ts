@@ -1,9 +1,7 @@
 import { Store, select } from '@ngrx/store';
-import * as fromURealEstate from "../../store/reducers/URealEstate.reducer"; 
 import * as fromActions from "../../store/actions/URealEstate.actions";
 import { Component, OnInit } from '@angular/core';
-import { WebApiService } from '../../services/web-api.service';
-import { CreateUserRequest } from '../../models/createUserRequest.model';
+import * as fromStore from '../../store';
 
 @Component({
   selector: 'app-navigate-bar',
@@ -11,29 +9,16 @@ import { CreateUserRequest } from '../../models/createUserRequest.model';
   styleUrls: ['./navigate-bar.component.css']
 })
 export class NavigateBarComponent implements OnInit {
-  // userDetailsOpen = false;
   userDetailsOpen: boolean;
-  // @Output() userClicked: EventEmitter<number> = new EventEmitter<number>();
-
-  constructor(private store: Store<fromURealEstate.State>) { }
+  constructor(private store: Store<fromStore.SystemState>) { }
 
   ngOnInit() {
-    // this.store.dispatch(new fromActions.UserDialogOpen(true));
-    this.store.select(fromURealEstate.getIsUserDialogOpen).subscribe(x => {console.log("x: ", x); this.userDetailsOpen = x});
+    this.store.select(fromStore.getIsUserDialogOpen).subscribe(x => this.userDetailsOpen = x);
   }
 
   userDetailsClicked(){
-    this.store.dispatch(new fromActions.UserDialogOpen(true));
-    // alert("here");
-    // this.userDetailsOpen = true;
-    
-    // this.userClicked.emit(0);
+    this.store.dispatch(new fromActions.UserDialogChange(true));
   }
-
-  // formClosed(){
-  //   // this.userDetailsOpen = false;
-  //   this.store.dispatch(new fromActions.UserDialogOpen(false));
-  // }
 
 
   // callWebApi() {
