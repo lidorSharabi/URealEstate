@@ -11,7 +11,7 @@ export interface State {
 
   export function reducer(state = initialState, action: fromActions.Actions): State {
     switch (action.type) {
-      case fromActions.USER_DIALOG_OPEN:{        
+      case fromActions.USER_DIALOG_CHANGE:{        
         const isOpen = action.payload;
         console.log("isOpen: ", isOpen);
         return{

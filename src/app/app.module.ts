@@ -18,6 +18,7 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { StoreModule } from '@ngrx/store';
 import { reducer } from './store/reducers/URealEstate.reducer';
 import { WebApiService } from './services/web-api.service';
+import { reducers } from './store';
 
 
 
@@ -42,7 +43,8 @@ import { WebApiService } from './services/web-api.service';
     DropDownsModule,
     DialogsModule,
     ButtonsModule,
-    StoreModule.forRoot(reducer),    
+    StoreModule.forRoot(reducer),  
+    StoreModule.forFeature('system' ,reducers),      
     HttpClientModule,
     
   ],

@@ -6,10 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  // users: any[] = [{ name: 'John' }, { name: 'Jane' }, { name: 'Mario' }];
+  //TODO: get this from server:
   source: string[] = ['תוצרת הארץ, תל אביב' , 'כפר גנים ג, פתח תקווה', 'גבעת הסלעים, ראש העין ' ];
-  // userFilter: any = { name: '' };
- // userFilter: any = '' ;
   public data: string[];
 
   constructor() { 

@@ -3,7 +3,7 @@
     /* width: 35%;
     border: 1px solid;
     border-radius: 15px; */
-    z-index: 400000000000;
+    /* z-index: 400000000000; */
 }
 
 .checkbox-container{
@@ -16,4 +16,5 @@
 .checkboxes-container{
     display: flex;
     flex-direction: row-reverse;
+    direction: ltr;
 }
