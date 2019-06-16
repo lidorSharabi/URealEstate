@@ -6,7 +6,4 @@ const getURealEstateState = createFeatureSelector<State>(
     "URealEstate"
   );
 
-export const getIsUserDialogOpen = createSelector(
-    getURealEstateState, 
-    (state: State) => state.isUserDialogOpen
-);
+export const getIsUserDialogOpen = createSelector(getURealEstateState, (state: State) => state.isUserDialogOpen);
