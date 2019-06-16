@@ -28,4 +28,10 @@ export class WebApiService {
       user,
       { withCredentials: true });
   }
+
+  getLocations(){
+    return this.http.get<Array<string>>(
+      'http://localhost:25099/api/data/get_locations',
+      { withCredentials: true });
+  }
 }
