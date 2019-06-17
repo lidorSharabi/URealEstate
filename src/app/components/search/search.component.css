@@ -63,6 +63,11 @@
     font-family: sans-serif;
 }
 
-#hhh{
-    text-align: right;
+#hhh .k-autocomplete .k-input{
+    /* text-align: right; */
+    direction: rtl !important;
 }
+
+/* .k-autocomplete .k-input{
+    direction: rtl !important;
+} */

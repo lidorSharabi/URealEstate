@@ -13,7 +13,6 @@ export interface State {
     switch (action.type) {
       case fromActions.USER_DIALOG_CHANGE:{        
         const isOpen = action.payload;
-        console.log("isOpen: ", isOpen);
         return{
             ...state,
             isUserDialogOpen: isOpen            
@@ -28,9 +27,7 @@ export interface State {
     //     };
     //   }
 
-      default: {
-        console.log("here");
-        
+      default: {        
         return state;
       }
     }

@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import * as fromActions from "../../store/actions/URealEstate.actions";
 import { WebApiService } from 'src/app/services/web-api.service';
 import * as fromStore from '../../store';
+import { Asset } from 'src/app/models/asset.model';
  
 @Component({
   selector: 'app-sign-in-form',
@@ -63,11 +64,15 @@ export class SignInFormComponent implements OnInit {
     }
 
     callWebApi() {
-      this.webApiService.createNewUser(this.model).subscribe((data: boolean) =>
-          console.log("createUser", data)
-      );
+      this.webApiService.createNewUser(this.model).subscribe((data: boolean) => {
+          console.log("createUser", data);
+          this.webApiService.getUserResults(this.model).subscribe((asset: Asset[]) => {
+          console.log("assets: ", asset);
+          this.model = new UserDetails();
+          });
+        });
       this.webApiService.check().subscribe((data: boolean) =>
         console.log("data", data)
-      );
+      );      
     }
 }

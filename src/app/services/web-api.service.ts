@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserDetails } from '../models/user-datails.model';
+import { Asset } from '../models/asset.model';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -25,6 +26,13 @@ export class WebApiService {
   createNewUser(user :UserDetails) {
     return this.http.post<any>(
       'http://localhost:25099/api/user/createUser',
+      user,
+      { withCredentials: true });
+  }
+
+  getUserResults(user :UserDetails) {
+    return this.http.post<Asset[]>(
+      'http://localhost:25099/api/user/getUserResults',
       user,
       { withCredentials: true });
   }
