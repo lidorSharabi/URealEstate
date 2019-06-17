@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WebApiService } from 'src/app/services/web-api.service';
 
 @Component({
   selector: 'app-search',
@@ -7,14 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
   //TODO: get this from server:
-  source: string[] = ['תוצרת הארץ, תל אביב' , 'כפר גנים ג, פתח תקווה', 'גבעת הסלעים, ראש העין ' ];
+  source: string[];// = ['תוצרת הארץ, תל אביב' , 'כפר גנים ג, פתח תקווה', 'גבעת הסלעים, ראש העין ' ];
   public data: string[];
 
-  constructor() { 
-    this.data = this.source.slice();
+  constructor(private webApiService: WebApiService) { 
   }
 
   ngOnInit() {
+    this.webApiService.getLocations().subscribe(
+      data => {
+        if (data){
+          this.source = data;
+        }
+        this.data = this.source.slice();
+      }
+    );
   }
 
   handleFilter(value) {

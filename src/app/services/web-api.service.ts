@@ -30,10 +30,16 @@ export class WebApiService {
       { withCredentials: true });
   }
 
+<<<<<<< HEAD
   getUserResults(user :UserDetails) {
     return this.http.post<Asset[]>(
       'http://localhost:25099/api/user/getUserResults',
       user,
+=======
+  getLocations(){
+    return this.http.get<Array<string>>(
+      'http://localhost:25099/api/data/get_locations',
+>>>>>>> f696916f2e7f4ad40273916f71cf33e42e11250f
       { withCredentials: true });
   }
 }

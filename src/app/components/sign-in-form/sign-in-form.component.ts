@@ -15,7 +15,7 @@ export class SignInFormComponent implements OnInit {
   userDetailsOpen: boolean;
   roomNum = [1,2,3,4,5,6,7];
   //TODO: get this from server:
-  locations = ["ראש העין", "תל אביב", "רמת השרון", "רעננה", "הרצליה", "ראשון לציון", "פתח תקווה", "מודיעין", "הוד השרון"];
+  locations: string[];// = ["ראש העין", "תל אביב", "רמת השרון", "רעננה", "הרצליה", "ראשון לציון", "פתח תקווה", "מודיעין", "הוד השרון"];
   model = new UserDetails();
   public DialogOpen = false;
 
@@ -23,6 +23,18 @@ export class SignInFormComponent implements OnInit {
 
   ngOnInit() {
     this.store.select(fromStore.getIsUserDialogOpen).subscribe(x => this.userDetailsOpen = x);
+    console.log('ngOnInit');
+    
+    this.webApiService.getLocations().subscribe(data => {
+        console.log('getLocations');
+
+        if (data){
+          console.log('data');
+
+          this.locations = data;
+        }
+      }
+    );
   }
 
   onSubmit() {
