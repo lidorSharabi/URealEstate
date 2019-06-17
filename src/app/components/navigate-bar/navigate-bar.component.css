@@ -5,3 +5,13 @@
     display: flex;
     direction: rtl;
 }
+
+.usr-btn{
+    height: 33px;
+    width: 33px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-right: 90vw;
+    margin-top: 2vh;
+}
