@@ -82,9 +82,6 @@ export class SignInFormComponent implements OnInit {
           console.log("assets: ", asset);
           this.model = new UserDetails();
           });
-        });
-      this.webApiService.check().subscribe((data: boolean) =>
-        console.log("data", data)
-      );      
+        });   
     }
 }
