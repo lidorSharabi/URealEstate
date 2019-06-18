@@ -19,9 +19,7 @@ import { StoreModule } from '@ngrx/store';
 import { reducer } from './store/reducers/URealEstate.reducer';
 import { WebApiService } from './services/web-api.service';
 import { reducers } from './store';
-
-
-
+import { RTL } from '@progress/kendo-angular-l10n';
 
 @NgModule({
   declarations: [
@@ -48,7 +46,7 @@ import { reducers } from './store';
     HttpClientModule,
     
   ],
-  providers: [WebApiService],
+  providers: [WebApiService, { provide: RTL, useValue: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
