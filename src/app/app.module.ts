@@ -20,6 +20,7 @@ import { reducer } from './store/reducers/URealEstate.reducer';
 import { WebApiService } from './services/web-api.service';
 import { reducers } from './store';
 import { RTL } from '@progress/kendo-angular-l10n';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RTL } from '@progress/kendo-angular-l10n';
     FooterComponent,
     ContentComponent,
     SearchComponent,
-    SignInFormComponent
+    SignInFormComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
