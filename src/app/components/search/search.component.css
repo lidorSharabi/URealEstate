@@ -62,12 +62,3 @@
     text-align: right;
     font-family: sans-serif;
 }
-
-#hhh .k-autocomplete .k-input{
-    /* text-align: right; */
-    direction: rtl !important;
-}
-
-/* .k-autocomplete .k-input{
-    direction: rtl !important;
-} */
