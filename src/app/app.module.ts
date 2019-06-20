@@ -22,6 +22,7 @@ import { reducers } from './store';
 import { RTL } from '@progress/kendo-angular-l10n';
 import { MenusModule  } from '@progress/kendo-angular-menu';
 
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MenusModule  } from '@progress/kendo-angular-menu';
     FooterComponent,
     ContentComponent,
     SearchComponent,
-    SignInFormComponent
+    SignInFormComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

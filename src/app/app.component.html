@@ -17,6 +17,8 @@
 
 <!-- <button type="submit" kendoButton style="top: 39vh;left: 80vw;font-weight: bold;background-color: #f7f9fc;">הוסף מודעה חדשה</button> -->
 <div class="contents flex-container" style="display: inline-flex;">
+<!-- <app-details [header]=header [picNum]=1 style="width: 70%; height: 50%;"></app-details> -->
+
 <div *ngFor="let header of contentsHeaders;let i = index" >
 
 <app-content [header]=header [picNum]=i></app-content>
