@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Store } from '@ngrx/store';
+import * as fromStore from '../../store';
+import * as fromActions from "../../store/actions/URealEstate.actions";
 
 @Component({
   selector: 'app-details',
@@ -14,15 +17,17 @@ src: string;
 liked = !true;
 disliked = !true;
 address = "ראש העין"
+userDetailsOpen: boolean;
 @Input() header: string;
 @Input() picNum: number;
 
 
-  constructor() { 
+  constructor(private store: Store<fromStore.SystemState>) { 
     
   }
 
   ngOnInit() {
+    this.store.select(fromStore.getIsUserDialogOpen).subscribe(x => this.userDetailsOpen = x);
     // console.log("i: ", this.picNum);
     this.src = '../../../assets/images/pic'+ this.picNum + '.jpg'
   }
@@ -37,5 +42,9 @@ address = "ראש העין"
 
   dislikeClick(){
     this.disliked = !this.disliked;
+  }
+
+  public closeForm() {
+    this.store.dispatch(new fromActions.UserDialogChange(false));
   }
 }
