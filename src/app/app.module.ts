@@ -20,6 +20,8 @@ import { reducer } from './store/reducers/URealEstate.reducer';
 import { WebApiService } from './services/web-api.service';
 import { reducers } from './store';
 import { RTL } from '@progress/kendo-angular-l10n';
+import { MenusModule  } from '@progress/kendo-angular-menu';
+
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import { RTL } from '@progress/kendo-angular-l10n';
     StoreModule.forRoot(reducer),  
     StoreModule.forFeature('system' ,reducers),      
     HttpClientModule,
+    MenusModule ,
     
   ],
   providers: [WebApiService, { provide: RTL, useValue: true }],

@@ -10,6 +10,15 @@ import * as fromStore from '../../store';
 })
 export class NavigateBarComponent implements OnInit {
   userDetailsOpen: boolean;
+  public items: any[] = [ {
+    text: 'כניסה',
+    items: [{ text: 'כניסה אישית' }, { text: 'צור חשבון' }, { text: 'כניסת מנהל' }]
+}];
+// public items: any[] = [ {
+//   text: 'שלום, הודיה',
+//   items: [{ text: 'לאזור האישי'}, { text: 'התנתק' }]
+// }];
+
   constructor(private store: Store<fromStore.SystemState>) { }
 
   ngOnInit() {

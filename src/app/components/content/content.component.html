@@ -21,9 +21,9 @@
     </div>
     <div class='card-footer'>
         <i class="far fa-images"></i>
-        <i class="far fa-heart" [ngClass]="{'liked': liked}" (click)="likeClick()"></i>
-        <i class="fas fa-heart" [ngClass]="{'liked': !liked}" (click)="likeClick()" style="color: red"></i>
-        <i class="fas fa-heart-broken" [ngClass]="{'disliked': disliked}" (click)="dislikeClick()"></i>
+        <i class="far fa-heart" [ngClass]="{'liked': liked}" (click)="likeClick()" title="שמור מודעה"></i>
+        <i class="fas fa-heart" [ngClass]="{'liked': !liked}" (click)="likeClick()" style="color: red" ></i>
+        <i class="fas fa-heart-broken" [ngClass]="{'disliked': disliked}" (click)="dislikeClick()" title="לא רלוונטי"></i>
     </div>
   </div>
 </div>

@@ -15,7 +15,9 @@ export class SignInFormComponent implements OnInit {
   userDetailsOpen: boolean;
   roomNum = [1,2,3,4,5,6,7];
   //TODO: get this from server:
-  locations: string[];// = ["ראש העין", "תל אביב", "רמת השרון", "רעננה", "הרצליה", "ראשון לציון", "פתח תקווה", "מודיעין", "הוד השרון"];
+  locations: string[];
+  floors: string[] = ['קרקע', '1', '2', '3', '4', '5', '6', '7'];
+  types: string[] = ['בית פרטי', 'דירה', 'מחסן', 'חניה', 'פנטהאוז'];
   model = new UserDetails();
   public DialogOpen = false;
 

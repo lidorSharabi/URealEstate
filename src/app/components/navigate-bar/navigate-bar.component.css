@@ -12,6 +12,12 @@
     background-color: transparent;
     border: none;
     outline: none;
-    margin-right: 90vw;
+}
+
+.usr-container{
+    display: flex;
     margin-top: 2vh;
+    margin-right: -2vh;
+     /* margin-right: -7vh; */
+    /* font-weight: bold;  */
 }
