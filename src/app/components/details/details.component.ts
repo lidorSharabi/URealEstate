@@ -13,6 +13,7 @@ srcq = 'https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg';
 src: string;
 liked = !true;
 disliked = !true;
+address = "ראש העין"
 @Input() header: string;
 @Input() picNum: number;
 
