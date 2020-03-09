@@ -29,7 +29,13 @@ export class NavigateBarComponent implements OnInit {
     this.store.dispatch(new fromActions.UserDialogChange(true));
   }
 
+  navigateToInsta(){
+    window.open("https://www.instagram.com/orokashi.u.real.estate/", "_blank");
+}
 
+navigateToFacebook(){
+  window.open("https://www.facebook.com/U-%D7%A9%D7%99%D7%95%D7%95%D7%A7-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-1831093603845315", "_blank");
+}
   // callWebApi() {
   //   var user = new CreateUserRequest();
   //   user.email = 'lidor206@gmail.com';

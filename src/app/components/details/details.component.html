@@ -1,61 +1,68 @@
-<kendo-dialog title="פרטים מלאים" style="direction: rtl;" *ngIf="userDetailsOpen" (close)="closeForm()" [width]="800" [height]="auto">
-<div class='container'>
-  <div class='card'>
-    <div class='card-body'>
-      <img src="../../../assets/images/pic0.jpg">
-      <i class="fas fa-chevron-right fa-2x" (click)="next_pic()" style="z-index: 2; position: absolute; color: #d9d9c6; top: 150px; right: 20px;"></i>
-      <i class="fas fas fa-chevron-left fa-2x" (click)="next_pic()" style="z-index: 2; position: absolute; color: #d9d9c6; top: 150px; left: 20px;"></i>
-<!-- מצב עריכה -->
-      <!-- <div dir="rtl" style="width: 30%;">  
-        <div><b>איזור: </b><input placeholder="ראש העין, גבעת טל" style="width: auto"/></div>
-        <div><b>קומה: </b><input placeholder="4" style="width: auto"/></div>
-        <div><b>מס' חדרים: </b><input placeholder="5" style="width: auto"/></div>
-        <div><b>סוג הנכס: </b><input placeholder="דירה בבניין" style="width: auto"/></div>
+<kendo-dialog title="פרטים מלאים" style="direction: rtl;" *ngIf="userDetailsOpen" (close)="closeForm()" [width]="800"
+  [height]="auto">
+  <div class='container'>
+    <div class='card'>
+      <div class='card-body'>
+        <img src="../../../assets/images/assets1.jpg">
+        <i class="fas fa-chevron-right fa-2x" (click)="next_pic()"
+          style="z-index: 2; position: absolute; color: #d9d9c6; top: 150px; right: 20px;"></i>
+        <i class="fas fas fa-chevron-left fa-2x" (click)="next_pic()"
+          style="z-index: 2; position: absolute; color: #d9d9c6; top: 150px; left: 20px;"></i>
+        <!-- מצב עריכה -->
+        <ng-container dir="rtl">
+          <div class="one-of-three-colunm" style="background-color: aqua">
+            <div class="row"><span>איזור: </span> <input calss="input_auto" placeholder="ראש העין, גבעת טל"/></div>
+            <!-- <div style="width: 100%"><b>קומה: </b><input placeholder="4"/></div>
+            <div style="width: 100%"><b>מס' חדרים: </b><input placeholder="5"/></div>
+            <div style="width: 100%"><b>סוג הנכס: </b><input placeholder="דירה בבניין"/></div> -->
+          </div>
+          <div class="one-of-three-colunm">
+            <div><b>מעלית: </b><input placeholder="קיים" style="width: auto" /></div>
+            <div><b>מ"ר: </b><input placeholder="130" style="width: auto" /></div>
+            <div><b>מיזוג אויר: </b><input placeholder="קיים" style="width: auto" /></div>
+            <div><b>מרפסת: </b><input placeholder="12 מר" style="width: auto" /></div>
+          </div>
+          <div class="one-of-three-colunm">
+            <div><b>חניה: </b><input placeholder="2 חניות מקורות" style="width: auto" /></div>
+            <div><b>ממד: </b><input placeholder="קיים" style="width: auto" /></div>
+            <div><b>מחסן: </b><input placeholder="אין" style="width: auto" /></div>
+            <div><b>נגישות לנכים: </b><input placeholder="יש" style="width: auto" /></div>
+          </div>
+        </ng-container>
+        <!-- מצב עריכה -->
+
+        <!-- <div class="rightt" dir="rtl" style="width: 30%; margin-right: 30px;">
+        <p><b>איזור: </b>ראש העין, גבעת טל</p>
+        <p><b>קומה: </b>4</p>
+        <p><b>מס' חדרים: </b>5</p>
+        <p><b>סוג הנכס: </b>דירה בבניין</p>
       </div>
-      <div class="rightt" dir="rtl" style="width: 30%; margin-right: 30px;">  
-        <div><b>מעלית: </b><input placeholder="קיים" style="width: auto"/></div>
-        <div><b>מ"ר: </b><input placeholder="65" style="width: auto"/></div>
-        <div><b>מיזוג אויר: </b><input placeholder="קיים" style="width: auto"/></div>
-        <div><b>מרפסת: </b><input placeholder="12 מר" style="width: auto"/></div>
+      <div class="rightt" dir="rtl" style="width: 30%; margin-right: 30px;">
+        <p><b>מעלית: </b>קיים</p>
+        <p><b>מ"ר: </b>130</p>
+        <p><b>מיזוג אויר: </b>קיים</p>
+        <p><b>מרפסת: </b>12 מ"ר</p>
       </div>
-      <div class="rightt" dir="rtl" style="width: 30%; margin-right: 30px;">  
-        <div><b>חניה: </b><input placeholder="2 חניות מקורות" style="width: auto"/></div>
-        <div><b>ממד: </b><input placeholder="קיים" style="width: auto"/></div>
-        <div><b>מחסן: </b><input placeholder="אין" style="width: auto"/></div>
-        <div><b>נגישות לנכים: </b><input placeholder="יש" style="width: auto"/></div> -->
-<!-- מצב עריכה -->
-        
-      <div class="rightt" dir="rtl" style="width: 30%; margin-right: 30px;">  
+      <div dir="rtl" style="width: 30%;">
         <p><b>חניה: </b>2 חניות מקורות</p>
         <p><b>ממד: </b>קיים</p>
         <p><b>מחסן: </b>אין</p>
         <p><b>נגישות לנכים: </b>יש</p>
-      </div>  
-      <div class="rightt" dir="rtl" style="width: 30%; margin-right: 30px;">  
-        <p><b>מעלית: </b>קיים</p>
-        <p><b>מ"ר: </b>65</p>
-        <p><b>מיזוג אויר: </b>קיים</p>
-        <p><b>מרפסת: </b>12 מ"ר</p>
+        </div> -->
+        <!-- <p style="font-family: sans-serif;font-weight: bold;margin: 0;" dir="rtl">{{header}}</p> -->
       </div>
-      <div dir="rtl" style="width: 30%;">  
-        <p><b>איזור: </b>{{address}}</p>
-        <p><b>קומה: </b>4</p>
-        <p><b>מס' חדרים: </b>5</p>
-        <p><b>סוג הנכס: </b>דירה בבניין</p>      </div>
-      <!-- <p style="font-family: sans-serif;font-weight: bold;margin: 0;" dir="rtl">{{header}}</p> -->
-    </div>
-    <div class='card-footer'>
-        <i class="fas fa-heart-broken" [ngClass]="{'disliked': disliked}" (click)="dislikeClick()"></i>
+      <div class='card-footer'>
+        <!-- <i class="fas fa-heart-broken" [ngClass]="{'disliked': disliked}" (click)="dislikeClick()"></i>
         <i class="far fa-heart" [ngClass]="{'liked': liked}" (click)="likeClick()"></i>
         <i class="fas fa-heart" [ngClass]="{'liked': !liked}" (click)="likeClick()" style="color: red"></i>
-        <div>שנת בניה: 2014</div>
-<!-- מצב עריכה -->
-        <!-- <button kendoButton>הסר מודעה</button>
-        <button kendoButton>ערוך מודעה</button>
-        <button kendoButton disabled="true">שמור מודעה</button> -->
-<!-- מצב עריכה -->
+        <div>שנת בניה: 2014</div> -->
+        <!-- מצב עריכה -->
+        <button kendoButton>הסר מודעה</button>
+        <button kendoButton disabled="true">ערוך מודעה</button>
+        <button kendoButton>שמור מודעה</button>
+        <!-- מצב עריכה -->
 
       </div>
+    </div>
   </div>
-</div>
 </kendo-dialog>

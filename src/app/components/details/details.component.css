@@ -59,3 +59,24 @@
   .disliked{
     color: red;
   }
+
+  .one-of-three-colunm{
+    margin-right: 20px;
+    width: 30%;
+  }
+
+  .input_auto{
+    width: auto;
+    margin-right: 30px;
+    /* background-color: aqua; */
+  }
+
+  .row{
+    display: inline-block;
+    width: 100%;
+    background-color: brown;
+    
+  }
+
+  /* .row >input{
+  } */

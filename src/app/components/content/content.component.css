@@ -83,7 +83,7 @@
     border-top: 1px solid #e1e1e1;
     margin: 0 15px;
     padding: 10px 0;
-    opacity: 0.3;
+    /* opacity: 0.3; */
   }
   .card-footer > .time-ago {
     font-size: 12px;

@@ -29,11 +29,11 @@ userDetailsOpen: boolean;
   ngOnInit() {
     this.store.select(fromStore.getIsUserDialogOpen).subscribe(x => this.userDetailsOpen = x);
     // console.log("i: ", this.picNum);
-    this.src = '../../../assets/images/pic'+ this.picNum + '.jpg'
+    this.src = '../assets/images/pic'+ this.picNum + '.jpg'
   }
 
   next_pic(){
-    this.src = '../../../assets/images/view2.jpeg';
+    this.src = '../assets/images/view2.jpeg';
   }
 
   likeClick(){

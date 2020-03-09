@@ -4,13 +4,14 @@ body{
 
 /* Split the screen in half */
 .navigation-panel {
-    height: 10%;
+    height: 7%;
     width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     overflow-x: hidden;
+    box-shadow: 5px 4px 20px 0px rgba(0,0,0,0.75);
   }
 
 .main-panel {
@@ -18,7 +19,7 @@ body{
     width: 100%;
     position: fixed;
     z-index: -1;
-    top: 10%;
+    top: 7%;
     left: 0;
     overflow-x: hidden;
   }

@@ -1,6 +1,7 @@
 .navigate-row{
     height: 100%;
-    background: linear-gradient(to top right, #5487b957 0%, #f2f2f200 100%);
+    /* background: linear-gradient(to top right, #5487b957 0%, #f2f2f200 100%); */
+    background-color: #74a79b;
     overflow: hidden;
     display: flex;
     direction: rtl;
@@ -20,4 +21,17 @@
     margin-right: -2vh;
      /* margin-right: -7vh; */
     /* font-weight: bold;  */
+}
+
+.links{
+    left: 20px;
+    align-self: center;
+    /* background-color: ivory; */
+    font-size: 45px;
+    flex: auto;
+    direction: ltr;
+}
+
+.fab{
+    margin: 10px;
 }

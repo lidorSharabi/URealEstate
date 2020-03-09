@@ -7,3 +7,128 @@
     height: 100%;
     opacity: 0.8;
     }
+
+
+    body{
+        left: 0;
+    }
+    
+    /* Split the screen in half */
+    .navigation-panel {
+        height: 10%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+      }
+    
+    .main-panel {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: -1;
+        top: 10%;
+        left: 0;
+        overflow-x: hidden;
+      }
+    
+      .contents{
+        top: 25%;
+        position: absolute;
+        z-index: 2;
+      }
+    
+      /* .contents{
+        top: 27%;
+        position: absolute;
+        z-index: 2;
+      }
+    
+      .contents2{
+        top: 79%;
+        position: absolute;
+        z-index: 2;
+      } */
+    
+      .flex-container {
+       display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        left: 5%;
+        right: 5%;
+        z-index: -1;
+      }
+    /* 
+      .flex-container {
+        display: flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+         left: 5%;
+         right: 5%;
+       } */
+    
+      .flex-container > app-content {
+        /* width: 100px; */
+        margin: 20px;
+        text-align: center;
+        /* line-height: 75px; */
+        /* font-size: 30px; */
+      }
+    
+      .search-container{
+        position: absolute;
+        left: 32%;
+        top: 10%;
+        margin: auto;
+        width: 50%;
+        /* border: 3px solid green; */
+      }
+    
+      .form-container{
+        text-align: right;
+        padding-top: 4%;
+      }
+    
+      /* .personal-area-container{
+        position: absolute;
+        left: 70vw;
+        top: 13vh;
+        width: 22vw;
+        height: 7vh;
+        border-radius: 24px;
+        text-align: center;
+        background-color: white;
+        font-weight: bold;
+        font-size: 32px;
+        color: #83bcf5;
+      }
+    
+      .personal-area1-container{
+        position: absolute;
+        left: 80vw;
+        top: 22vh;
+        width: 11vw;
+        height: 4vh;
+        border-radius: 24px;
+        text-align: center;
+        background-color: white;
+        font-weight: bold;
+        font-size: 19px;
+        color: #0005ad;
+      }
+    
+      .personal-area2-container{
+        position: absolute;
+        left: 80vw;
+        top: 73vh;
+        width: 11vw;
+        height: 4vh;
+        border-radius: 24px;
+        text-align: center;
+        background-color: white;
+        font-weight: bold;
+        font-size: 19px;
+        color: #0005ad;
+      } */
